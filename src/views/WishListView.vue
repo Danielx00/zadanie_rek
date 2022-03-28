@@ -5,7 +5,7 @@
     </p>
     <WishList v-else :movies="movies" @deleteMovie="deleteMovie" />
     <v-snackbar
-      :timeout="1500"
+      :timeout="2000"
       :value="snackBar"
       right
       top
