@@ -12,6 +12,7 @@
         class="mt-8 mx-2"
         dark
         v-model="term"
+        v-on:keyup.enter="$emit('search', term)"
       ></v-text-field>
       <v-btn
         @click="$emit('search', term)"
@@ -32,6 +33,11 @@ export default {
     return {
       term: "",
     };
+  },
+  methods: {
+    enter() {
+      alert("click");
+    },
   },
 };
 </script>
